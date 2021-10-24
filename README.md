@@ -1,0 +1,1 @@
+# orangefox_device_samsung_gta2xlwifi
