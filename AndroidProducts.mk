@@ -14,5 +14,5 @@
 # limitations under the License.
 #
 
-PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_gta2xl.mk
+PRODUCT_MAKEFILES := $(LOCAL_DIR)/omni_gta2xlwifi.mk
 

@@ -14,18 +14,21 @@
 # limitations under the License.
 #
 
-DEVICE_FOLDER := device/samsung/gta2xl
-
-ALLOW_MISSING_DEPENDENCIES=true
+DEVICE_FOLDER := device/samsung/gta2xlwifi
 
 # Architecture
-TARGET_ARCH := arm
+TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
-TARGET_CPU_ABI := armeabi-v7a
+TARGET_CPU_ABI := arm64-v8a
 TARGET_CPU_ABI2 := armeabi
 TARGET_CPU_VARIANT := cortex-a53
-TARGET_CPU_SMP := true
 
+# 2nd Arch
+TARGET_2ND_ARCH := arm
+TARGET_2ND_ARCH_VARIANT := armv8-a
+TARGET_2ND_CPU_ABI := armeabi-v7a
+TARGET_2ND_CPU_ABI2 := armeabi
+TARGET_2ND_CPU_VARIANT := cortex-a53
 
 ENABLE_CPUSETS := true
 ENABLE_SCHEDBOOST := true
@@ -41,6 +44,7 @@ TARGET_NO_BOOTLOADER := true
 TARGET_NO_RADIOIMAGE := true
 
 # Kernel
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_PREBUILT_KERNEL := $(DEVICE_FOLDER)/prebuilt/Image.gz-dtb
 BOARD_KERNEL_BASE := 0x80000000
 BOARD_KERNEL_PAGESIZE := 2048
@@ -58,7 +62,6 @@ BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
 
 # Partitions - Todo
 BOARD_FLASH_BLOCK_SIZE := 131072 # (BOARD_KERNEL_PAGESIZE * 64)
-
 
 # Android Verified Boot
 BOARD_AVB_ENABLE := false
